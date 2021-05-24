@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\lesson4",
+    "\\lesson4\\tests",
+    "\\lesson4\\tests\\acceptance",
+    "\\lesson4\\tests\\functional"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\lesson4\\vendor",
   "PreviewInSolutionExplorer": false
 }
