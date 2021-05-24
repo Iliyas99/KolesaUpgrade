@@ -7,7 +7,7 @@ class FirstCest
     */
     public function FindProductAndQuickVieW(AcceptanceTester $I)
     {
-        $I->amOnPage("");
+        $I->amOnPage(""); // изменение для пула
         $I->waitForElementVisible("[title='Blouse']");
         $I->seeElement("#homefeatured > li:nth-child(2) > div > div.left-block > div > a.quick-view");
 
