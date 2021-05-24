@@ -1,1 +1,1 @@
-tests\acceptance\FirstCest.php:FindProductAndQuickVieW
+tests\acceptance\FindProductCest.php:FindProductAndQuickVieW

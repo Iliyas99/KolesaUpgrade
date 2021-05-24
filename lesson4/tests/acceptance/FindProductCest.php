@@ -1,6 +1,6 @@
 <?php
 
-class FirstCest
+class FindProductCest
 {
     /**
     * Найти товар, нажать на Быстрый просмотр и проверить название товара
