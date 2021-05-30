@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\lesson4\\tests",
+    "\\lesson5",
+    "\\lesson5\\tests",
+    "\\lesson5\\tests\\acceptance"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\lesson5\\tests\\acceptance\\FirstCest.php",
   "PreviewInSolutionExplorer": false
 }
