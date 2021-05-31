@@ -6,6 +6,6 @@
     "\\lesson4\\tests\\acceptance",
     "\\lesson4\\tests\\functional"
   ],
-  "SelectedNode": "\\lesson4\\tests\\acceptance\\FindProductCest.php",
+  "SelectedNode": "\\lesson4\\tests\\functional\\SearchProductCest.php",
   "PreviewInSolutionExplorer": false
 }
