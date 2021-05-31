@@ -49,11 +49,78 @@ class MainPage
      * @var \AcceptanceTester;
      */
 
-     protected $acceptanceTester;
+    protected $acceptanceTester;
 
-     public function waitForElementAppear()
-     {
-         $this -> acceptanceTester -> waitForElement(MainPage::$gridButton, 3);
-     }
+     
+    /**
+     * найти кнопку Dresses
+    */
+    public function findDressesButton()
+    {
+        $this -> acceptanceTester -> seeElement(self::$dressesButton);
+        return $this;
+    }
 
+    /**
+     * навести мышку на кнопку Dresses
+    */
+    public function moveMouseToDressesButton()
+    {
+        $this -> acceptanceTester -> moveMouseOver(self::$dressesButton);
+        return $this;
+    }
+
+    /**
+     * нажать на кнопку SummerDresses
+    */
+    public function clickSummerDressesButton()
+    {
+        $this -> acceptanceTester -> click(self::$summerDressesButton);
+        return $this;
+    }
+    
+    /**
+     * Ждем появление кнопки переключателся на Grid
+    */
+    public function waitForGridButtonAppear()
+    {
+        $this -> acceptanceTester -> waitForElement(self::$gridButton, 3);
+        return $this;
+    }
+
+    /**
+     * Видите что по дефолту выбрана раскладка Grid
+    */
+    public function validateGridButtonSelected()
+    {
+        $this -> acceptanceTester -> seeElement(self::$gridButton);
+        return $this;
+    }
+
+    /**
+     * Видите что карточки с товаром расположены в режиме таблицы
+     */
+    public function validateProductsInGridMode()
+    {
+        $this -> acceptanceTester -> seeElement(self::$gridTable);
+        return $this;
+    }
+
+    /**
+     * Кликаете на кнопку List
+     */
+    public function clickListModeButton()
+    {
+        $this -> acceptanceTester -> click(self::$listButton);
+        return $this;
+    }
+
+    /**
+     * Проверяете что отображение карточек изменилось на List
+     */
+    public function validateProductsInListMode()
+    {
+        $this -> acceptanceTester -> seeElement(self::$listTable);
+        return $this;
+    }
 }

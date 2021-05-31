@@ -16,18 +16,22 @@ class GridAndListSwitcherCest
         $mainPage = new MainPage($I);
         
         $I->amOnPage(MainPage::$URL);
-        $I->seeElement(MainPage::$dressesButton);
+
+        $mainPage->findDressesButton()->moveMouseToDressesButton()->clickSummerDressesButton();
+        /*$I->seeElement(MainPage::$dressesButton);
         $I->moveMouseOver(MainPage::$dressesButton);
-        $I->click(MainPage::$summerDressesButton);
+        $I->click(MainPage::$summerDressesButton);*/
 
-        $I->waitForElement(MainPage::$gridButton, 3);
+        $mainPage->waitForGridButtonAppear();
 
-        $I->seeElement(MainPage::$gridButton);
-        $I->seeElement(MainPage::$gridTable);
+        $mainPage->validateGridButtonSelected()->validateProductsInGridMode();
+        /*$I->seeElement(MainPage::$gridButton);
+        $I->seeElement(MainPage::$gridTable);*/
 
-        $I->waitForElement(MainPage::$listButton, 3);
+        //$I->waitForElement(MainPage::$listButton, 3);
 
-        $I->click(MainPage::$listButton);
-        $I->seeElement(MainPage::$listTable);
+        $mainPage->clickListModeButton()->validateProductsInListMode();
+        /*$I->click(MainPage::$listButton);
+        $I->seeElement(MainPage::$listTable);*/
     }
 }
