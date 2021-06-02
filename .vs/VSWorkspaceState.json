@@ -1,11 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\lesson4",
-    "\\lesson4\\tests",
-    "\\lesson4\\tests\\acceptance",
-    "\\lesson4\\tests\\functional"
+    "\\lesson5",
+    "\\lesson5\\tests",
+    "\\lesson5\\tests\\acceptance",
+    "\\lesson5\\tests\\_support",
+    "\\lesson5\\tests\\_support\\Page",
+    "\\lesson5\\tests\\_support\\Page\\Acceptance"
   ],
-  "SelectedNode": "\\lesson4\\tests\\acceptance\\FindProductCest.php",
+  "SelectedNode": "\\lesson5\\tests\\acceptance.suite.yml",
   "PreviewInSolutionExplorer": false
 }
