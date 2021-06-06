@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '7197ab6c8bf1aaf58a81b53d4c136f1c05b33d60',
+    'reference' => '06e5d103543687e1ff612520d690819232a4dca0',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '7197ab6c8bf1aaf58a81b53d4c136f1c05b33d60',
+      'reference' => '06e5d103543687e1ff612520d690819232a4dca0',
     ),
     'behat/gherkin' => 
     array (
@@ -116,6 +116,15 @@
       array (
         0 => '*',
       ),
+    ),
+    'fzaninotto/faker' => 
+    array (
+      'pretty_version' => 'v1.5.0',
+      'version' => '1.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd0190b156bcca848d401fb80f31f504f37141c8d',
     ),
     'guzzlehttp/guzzle' => 
     array (
