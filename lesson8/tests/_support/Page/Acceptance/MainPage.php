@@ -52,5 +52,8 @@ class MainPage{
      */
     public static $addToCartButton = "//span[contains(text(),'Add to cart')]";
 
-    
+    /**
+     * Локатор карточки айфрейма
+     */
+    public static $iframeProductCard = '//*[@class="fancybox-iframe"]';
 }
