@@ -12,7 +12,7 @@ class MainPage{
      * 
      * @var string
      */
-    public static $productBlock = "//li[contains(@class, 'ajax_block_product')][1]";
+    public static $productBlock = "//li[contains(@class, 'ajax_block_product')][%s]";
 
 
      /**
@@ -20,40 +20,49 @@ class MainPage{
       */
     public static $login = "//a[@class='login']";
 
-    /**
-     * локатор для email
-     */
-    public static $email = "//input[@id='email']";
 
     /**
-     * локатор для password
+     * локатор для проверки удачного логина
      */
-    public static $password = "//input[@id='passwd']";
-
-    /**
-     * локатор для submit
-     */
-    public static $submit = "//button[@id='SubmitLogin']";
-
-
-    /**
-     * локатор для моей страницы
-     */
-    public static $myPage = "//span[contains(text(),'My account')]";
+    public static $myAccaunt = "//h1[contains(text(),'My account')]";
 
 
     /**
      * Локатор Quick view
      */
-    public static $quickView = "//a[contains(@href,'id_product=1') and @class='quick-view']";
+    public static $quickView = "#homefeatured > li:nth-child(%s) > div > div.left-block > div > a.quick-view > span";
 
     /**
      * Локатор кнопки добавления в корзину 
      */
-    public static $addToCartButton = "//span[contains(text(),'Add to cart')]";
+    public static $addToWishList = "//a[@id='wishlist_button']";
 
+    /**
+     * локатор текста успешного добавления в избранное
+     */
+    public static $addedToWishListText = "//p[contains(text(),'Added to your wishlist.')]";
+
+    /**
+     * локатор кнопки логаута
+     */
+    public static $logout = "//a[@class='logout']";
+
+    /**
+     * локатор для iframe
+     */
+    public static $iframeProductCard = "//*[@class='fancybox-iframe']";
+
+    /**
+     * локатор кнопки закрыть
+     */
+    public static $closeButton = "//a[@class='fancybox-item fancybox-close']";
+
+<<<<<<< HEAD
     /**
      * Локатор карточки айфрейма
      */
     public static $iframeProductCard = '//*[@class="fancybox-iframe"]';
+=======
+    public static $accaunt = "//a[@class='account']";
+>>>>>>> fc82762c44dcc119f6dcc37ce71a6a39023528cf
 }
