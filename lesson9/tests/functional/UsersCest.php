@@ -11,6 +11,7 @@ class UsersCest{
     public const EMAIL = 'test@test.test';
     public const JOB = 'Kolesa';
     public const NAME = 'User';
+    public const NEW_NAME = 'NewUser';
 
     public static $defaultSchema = [
         'job' => 'string',
@@ -33,7 +34,6 @@ class UsersCest{
      */
     public function checkUserCreate(\FunctionalTester $I){
         
-
         $I->haveHttpHeader('Content-Type', 'application/json');
         $I->sendPost('human', self::$userData);
         $I->seeResponseCodeIsSuccessful();
@@ -48,7 +48,9 @@ class UsersCest{
      */
     public function checkUserUpdate(\FunctionalTester $I){
         $I->haveHttpHeader('Content-Type', 'application/json');
-        $I->sendPut('human', array(['owner' => self::OWNER, 'name' => 'davert']);
+        $I->sendGet('people', ['owner' => self::OWNER]);
+        $user_id = $I->grabDataFromResponseByJsonPath('_id');
+        $I->sendPut('human', ['_id' => $user_id[0], 'owner' => self::NEW_NAME]);
         $I->seeResponseContainsJson(['nModified' => 1]);
     }
 
@@ -59,8 +61,8 @@ class UsersCest{
      */
     public function checkUserDelete(\FunctionalTester $I){
         $I->haveHttpHeader('Content-Type', 'application/json');
-        $I->sendDelete('human', ['owner' => self::OWNER]);
-        //$I->sendGet('people', ['owner' => self::OWNER]);
+        $user_id = $I->grabDataFromResponseByJsonPath('_id');
+        $I->sendDelete('human', ['_id' => $user_id[0]]);
         $I->seeResponseContainsJson(['deletedCount' => 1]);
     }
 
