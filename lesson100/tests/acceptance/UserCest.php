@@ -20,6 +20,9 @@ class UserCest{
                 'owner' => $this::OWNER,
                 'job' => $faker->company,
                 'name' => $faker->name,
+                'canbeKilledBySnap' => $faker->boolean(),
+                'created_at' => $faker->date("Y-m-d"),
+
             ];
 
             $I->haveInCollection('people', $userData);
@@ -32,21 +35,16 @@ class UserCest{
             $I->wantTo('Проверить получение пользователей по создателю записи');
             $I->sendGet('/people', ['owner' => $userData['owner']]);
             $I->seeResponseContainsJson([$userData]);
+            $count = $I->grabCollectionCount('people', ['owner' => $this->userData['owner'],'canbeKilledBySnap'=> true]);
+            
+            $I->amOnPage('/?owner='.$this::OWNER);
+            $I->assertContains(MainPage::$counter, $this::NUMBER);
+            $I->assertEquals(strlen(MainPage::$users), $this::NUMBER);
+            $I->click(MainPage::$button);
+            $I->assertContains(MainPage::$counter, strval($count));
+            $I->assertEquals(strlen(MainPage::$users), $count);
         }
 
     }
-
-    /**
-     * Проверить что при нажатии на кнопку удаляется таблица
-     */
-    public function checkUserDelete(\AcceptanceTester $I){
-        $I->amOnPage('/?owner='.$this::OWNER);
-        $I->assertContains(MainPage::$counter, '10');
-        $I->assertEquals(strlen(MainPage::$users), 10);
-        $I->click(MainPage::$button);
-        $I->assertContains(MainPage::$counter, '0');
-        $I->assertEquals(strlen(MainPage::$users), 0);
-    }
-        
     
 }
