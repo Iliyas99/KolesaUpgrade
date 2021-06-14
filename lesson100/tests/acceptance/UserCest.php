@@ -35,15 +35,17 @@ class UserCest{
             $I->wantTo('Проверить получение пользователей по создателю записи');
             $I->sendGet('/people', ['owner' => $userData['owner']]);
             $I->seeResponseContainsJson([$userData]);
-            $count = $I->grabCollectionCount('people', ['owner' => $this->userData['owner'],'canbeKilledBySnap'=> true]);
             
-            $I->amOnPage('/?owner='.$this::OWNER);
-            $I->assertContains(MainPage::$counter, $this::NUMBER);
-            $I->assertEquals(strlen(MainPage::$users), $this::NUMBER);
-            $I->click(MainPage::$button);
-            $I->assertContains(MainPage::$counter, strval($count));
-            $I->assertEquals(strlen(MainPage::$users), $count);
         }
+
+        $count = $I->grabCollectionCount('people', ['owner' => $this->userData['owner'],'canbeKilledBySnap'=> true]);
+        $I->amOnPage('/?owner='.$this::OWNER);
+        $I->assertContains(MainPage::$counter, $this::NUMBER);
+        $I->assertEquals(strlen(MainPage::$users), $this::NUMBER);
+        $I->click(MainPage::$button);
+        $I->assertContains(MainPage::$counter, strval($count));
+        $I->assertEquals(strlen(MainPage::$users), $count);
+        
 
     }
     
