@@ -17,13 +17,13 @@ class LoginCest
         $loginPage = new LoginPage($I);
         $I->amOnPage('');
 
-        $loginPage->fillNameField()->fillPasswordField()->clickSubmit();
+        //$loginPage->fillNameField()->fillPasswordField()->clickSubmit();
         /*
         $I->fillField("//input[@id='user-name']", "locked_out_user");
         $I->fillField("//input[@id='password']", "secret_sauce");
         $I->click("//input[@id='login-button']");*/
 
-        $loginPage->waitForErrorBoxAppear()->clickToDeleteErrorBox()->validateErrorBoxDisapear();
+        //$loginPage->waitForErrorBoxAppear()->clickToDeleteErrorBox()->validateErrorBoxDisapear();
         /*$I->waitForElement("//div[@class='error-message-container error']", 3);
         $I->click("//button[@class='error-button']");
         $I->dontSeeElement("//h3[@data-test='error']");*/
