@@ -15,10 +15,7 @@ jobs:
       - name: Install Faker
         run: composer require fzaninotto/faker
       - name: Run Chromedriver
-        run: 
-          export DISPLAY=:99
-          chromedriver --headless --disable-gpu --no-sandbox --disable-dev-shm-usage --url-base=/wd/hub &
-          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
+        run: nohup $CHROMEWEBDRIVER/chromedriver --headless --disable-gpu --url-base=/wd/hub /dev/null 2>&1 &
       - name: Run tests
         run: php vendor/bin/codecept run --steps -vvv
       
