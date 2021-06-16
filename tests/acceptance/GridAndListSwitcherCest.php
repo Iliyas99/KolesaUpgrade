@@ -17,10 +17,10 @@ class GridAndListSwitcherCest
         
         $I->amOnPage('');
 
-        //$mainPage->findDressesButton()->moveMouseToDressesButton()->clickSummerDressesButton();
-        /*$I->seeElement(MainPage::$dressesButton);
+        $mainPage->findDressesButton()->moveMouseToDressesButton()->clickSummerDressesButton();
+        $I->seeElement(MainPage::$dressesButton);
         $I->moveMouseOver(MainPage::$dressesButton);
-        $I->click(MainPage::$summerDressesButton);*/
+        $I->click(MainPage::$summerDressesButton);
 
         //$mainPage->waitForGridButtonAppear();
 
