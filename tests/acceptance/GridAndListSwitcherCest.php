@@ -15,7 +15,7 @@ class GridAndListSwitcherCest
     {
         $mainPage = new MainPage($I);
         
-        $I->amOnPage(выфа);
+        $I->amOnPage('');
 
         //$mainPage->findDressesButton()->moveMouseToDressesButton()->clickSummerDressesButton();
         /*$I->seeElement(MainPage::$dressesButton);
