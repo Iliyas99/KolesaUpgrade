@@ -1,1 +1,1 @@
-{"message":"Route PUT:/test/people not found","error":"Not Found","statusCode":404}
+[{"job":"Kolesa","superhero":false,"skill":"","_id":"60c607d3922ea5608c494aaf","email":"test@test.test","name":"User","DOB":"Sun Jun 13 2021 13:27:47 GMT+0000 (Coordinated Universal Time)","avatar":"https://cdn.fakercloud.com/avatars/plasticine_128.jpg","owner":"Il1yas"}]
